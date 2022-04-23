@@ -3,8 +3,10 @@ import AddTodo from "./components/AddTodo/AddTodo";
 import Tabs from "./components/Tabs/Tabs";
 import TodoList from "./components/TodoList/TodoList";
 import GlobalStyles from "./GlobalStyles";
+import { useAppSelector } from "./app/hooks";
 
 function App() {
+  const todo = useAppSelector((state) => state.todo.value);
   return (
     <>
       <GlobalStyles />
@@ -13,7 +15,9 @@ function App() {
         <MainWrapper>
           <Main>
             <Tabs />
-            <AddTodo />
+            {(todo.selectedTab === "All" || todo.selectedTab === "Active") && (
+              <AddTodo />
+            )}
             <TodoList />
           </Main>
         </MainWrapper>
