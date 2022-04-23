@@ -1,17 +1,19 @@
-import { useState } from "react";
 import { TabsContainer, UnderlinedDiv } from "./Tabs.styles";
 import { motion } from "framer-motion";
-
-const tabsList: Array<string> = ["All", "Active", "Completed"];
+import { useAppSelector } from "../../app/hooks";
+import { useAppDispatch } from "../../app/hooks";
+import { switchTab } from "../../features/todo";
+import { tabsList } from "../../features/todo";
 
 const Tabs = () => {
-  const [selectedTab, setSelectedTab] = useState(tabsList[0]);
+  const todo = useAppSelector((state) => state.todo.value);
+  const dispatch = useAppDispatch();
   return (
     <TabsContainer>
       {tabsList.map((tab, index) => (
-        <li key={index} onClick={() => setSelectedTab(tab)}>
+        <li key={index} onClick={() => dispatch(switchTab(tab))}>
           {tab}
-          {tab === selectedTab && (
+          {tab === todo.selectedTab && (
             <UnderlinedDiv as={motion.div} layoutId="underline" />
           )}
         </li>

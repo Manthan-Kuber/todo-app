@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const tabsList: Array<string> = ["All", "Active", "Completed"];
+export const tabsList: Array<string> = ["All", "Active", "Completed"];
 
 interface todoState {
   value: {
@@ -19,9 +19,11 @@ const todoSLice = createSlice({
   initialState,
   reducers: {
     switchTab: (state, action) => {
-      state.value = action.payload;
+      state.value.selectedTab = action.payload;
     },
   },
 });
+
+export const { switchTab } = todoSLice.actions;
 
 export default todoSLice.reducer;
