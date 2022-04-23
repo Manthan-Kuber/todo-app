@@ -1,5 +1,7 @@
 import { AppWrapper, Main, MainWrapper } from "./App.styles";
-import TabComponent from "./components/TabComponent/TabComponent";
+import AddTodo from "./components/AddTodo/AddTodo";
+import Tabs from "./components/Tabs/Tabs";
+import TodoList from "./components/TodoList/TodoList";
 import GlobalStyles from "./GlobalStyles";
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
         <h1>#todo</h1>
         <MainWrapper>
           <Main>
-            <TabComponent/>
+            <Tabs />
+            <AddTodo />
+            <TodoList />
           </Main>
         </MainWrapper>
       </AppWrapper>
