@@ -1,7 +1,12 @@
+import { Container, StyledButton, TodoInput } from "./AddTodo.styles";
+
 const AddTodo = () => {
   return (
-    <div>AddTodo</div>
-  )
-}
+    <Container>
+      <TodoInput placeholder="add details" />
+      <StyledButton>Add</StyledButton>
+    </Container>
+  );
+};
 
-export default AddTodo
+export default AddTodo;
