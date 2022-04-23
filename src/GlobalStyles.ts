@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root{
-  --clr-primary:#EB5757;
+  --clr-primary:#2F80ED;
   --ff-montserrat:'Montserrat', sans-serif;
   --ff-raleway:'Raleway', sans-serif;
 }
