@@ -29,4 +29,13 @@ export const StyledButton = styled.button`
   border-radius: 12px;
   color: white;
   font: 600 1.4rem var(--ff-montserrat);
+  transition: transform ease-out 0.15s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;

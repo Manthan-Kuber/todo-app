@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const TabsContainer = styled.ul`
   border-bottom: 1px solid #bdbdbd;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  
+  grid-template-columns: repeat(3, 1fr);
+
   li {
-      font: 600 1.4rem var(--ff-montserrat);
-      color: #333;
-      list-style: none;
-      position: relative;
-      cursor: pointer;
-      padding-bottom: 1.4rem;
-      text-align: center;
-    }
-    `;
+    font: 600 1.4rem var(--ff-montserrat);
+    color: #333;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 1.4rem;
+    text-align: center;
+  }
+`;
 
 export const UnderlinedDiv = styled.div`
   position: absolute;
