@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { checkUncheck } from "../../features/todo";
+import { checkUncheck, deleteTodos } from "../../features/todo";
 import { StyledUl, Wrapper } from "./TodoList.styles";
 import { BiTrashAlt } from "react-icons/bi";
 
@@ -30,7 +30,7 @@ const TodoList = () => {
                 <input
                   type="checkbox"
                   checked={item.status}
-                  onChange={() => dispatch(checkUncheck(index))}
+                  // onChange={() => dispatch(checkUncheck(index))}
                 />
                 <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
               </Wrapper>
@@ -45,11 +45,15 @@ const TodoList = () => {
                 <input
                   type="checkbox"
                   checked={item.status}
-                  onChange={() => dispatch(checkUncheck(index))}
+                  // onChange={() => dispatch(checkUncheck(index))}
                 />
                 <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
               </Wrapper>
-              <BiTrashAlt size={24} className="deleteIcon" />
+              <BiTrashAlt
+                size={24}
+                className="deleteIcon"
+                onClick={() => dispatch(deleteTodos(index))}
+              />
             </li>
           ))
       ) : (

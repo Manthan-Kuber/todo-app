@@ -3,11 +3,13 @@ import AddTodo from "./components/AddTodo/AddTodo";
 import Tabs from "./components/Tabs/Tabs";
 import TodoList from "./components/TodoList/TodoList";
 import GlobalStyles from "./GlobalStyles";
-import { useAppSelector } from "./app/hooks";
+import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { BiTrashAlt } from "react-icons/bi";
+import {deleteAllTodos} from "./features/todo"
 
 function App() {
   const todo = useAppSelector((state) => state.todo.value);
+  const dispatch = useAppDispatch();
   return (
     <>
       <GlobalStyles />
@@ -20,12 +22,14 @@ function App() {
               <AddTodo />
             )}
             <TodoList />
-            {todo.selectedTab === "Completed" && (
-              <DeleteButton>
-                <BiTrashAlt className="deleteIcon" size={14} />
-                Delete All
-              </DeleteButton>
-            )}
+            {todo.selectedTab === "Completed" &&
+              todo.todoList.filter((item) => item.status === true).length !==
+                0 && (
+                <DeleteButton onClick={() => dispatch(deleteAllTodos())} >
+                  <BiTrashAlt className="deleteIcon" size={14} />
+                  Delete All
+                </DeleteButton>
+              )}
           </Main>
         </MainWrapper>
       </AppWrapper>

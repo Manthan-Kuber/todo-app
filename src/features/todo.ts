@@ -48,10 +48,20 @@ const todoSLice = createSlice({
         });
       state.value.todoInput = "";
     },
+    deleteTodos: (state, action) => {
+      state.value.todoList.splice(action.payload, 1);
+    },
+    deleteAllTodos :(state) => {state.value.todoList = []}
   },
 });
 
-export const { switchTab, checkUncheck, todoInputChangeHandler, addTodos } =
-  todoSLice.actions;
+export const {
+  switchTab,
+  checkUncheck,
+  todoInputChangeHandler,
+  addTodos,
+  deleteTodos,
+  deleteAllTodos,
+} = todoSLice.actions;
 
 export default todoSLice.reducer;
