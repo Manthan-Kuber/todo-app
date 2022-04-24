@@ -2,8 +2,7 @@ import { TabsContainer, UnderlinedDiv } from "./Tabs.styles";
 import { motion } from "framer-motion";
 import { useAppSelector } from "../../app/hooks";
 import { useAppDispatch } from "../../app/hooks";
-import { switchTab } from "../../features/todo";
-import { tabsList } from "../../features/todo";
+import { switchTab, tabsList } from "../../features/todo";
 
 const Tabs = () => {
   const todo = useAppSelector((state) => state.todo.value);
