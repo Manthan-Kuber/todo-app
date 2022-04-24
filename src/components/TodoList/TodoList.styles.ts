@@ -9,8 +9,11 @@ export const StyledUl = styled.ul`
     gap: 0.5rem;
     margin-bottom: 3rem;
   }
-  input{
-      width: 24px;
-      accent-color: var(--clr-primary);
+  input {
+    width: 24px;
+    accent-color: var(--clr-primary);
+  }
+  .strikedTodo {
+    text-decoration: line-through;
   }
 `;

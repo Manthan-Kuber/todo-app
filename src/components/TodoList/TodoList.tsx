@@ -7,16 +7,18 @@ const TodoList = () => {
   const dispatch = useAppDispatch();
   return (
     <StyledUl>
-      {todo.todoList.map((item, index) => (
-        <li key={index}>
-          <input
-            type="checkbox"
-            checked={todo.isChecked[index]}
-            onChange={() => dispatch(checkUncheck(index))}
-          />
-          <p>{item}</p>
-        </li>
-      ))}
+      {todo.selectedTab === "All"
+        ? todo.todoList.map((item,index) => (
+            <li key={index}>
+              <input
+                type="checkbox"
+                checked={item.status}
+                onChange={() => dispatch(checkUncheck(index))}
+              />
+              <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
+            </li>
+          ))
+        : ""}
     </StyledUl>
   );
 };
