@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledButton } from "./components/AddTodo/AddTodo.styles";
 
 export const AppWrapper = styled.div`
   display: flex;
@@ -15,8 +16,23 @@ export const AppWrapper = styled.div`
 export const Main = styled.main`
   width: min(100%, 48rem);
   margin-top: 6rem;
+  position: relative;
+  .deleteIcon {
+    position: relative;
+    top: 1.4px;
+    bottom: 1.4px;
+    margin-right: 0.2rem;
+  }
 `;
 export const MainWrapper = styled.div`
   display: grid;
   justify-items: center;
+`;
+
+export const DeleteButton = styled(StyledButton)`
+  padding: 1.2rem 2.6rem;
+  border-radius: 4px;
+  background-color: #eb5757;
+  position: absolute;
+  right: 0;
 `;

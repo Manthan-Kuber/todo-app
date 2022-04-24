@@ -23,7 +23,7 @@ export const TodoInput = styled.input`
 `;
 
 export const StyledButton = styled.button`
-  background-color: var(--clr-primary);
+  background-color: ${props => props.color || "var(--clr-primary)"};
   border: none;
   padding: 2rem 4rem;
   border-radius: 12px;

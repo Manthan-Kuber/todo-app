@@ -6,7 +6,7 @@ export const StyledUl = styled.ul`
   li {
     list-style: none;
     display: flex;
-    gap: 0.5rem;
+    justify-content: space-between;
     margin-bottom: 3rem;
   }
   input {
@@ -16,4 +16,17 @@ export const StyledUl = styled.ul`
   .strikedTodo {
     text-decoration: line-through;
   }
+
+  .deleteIcon {
+    color: #bdbdbd;
+    &:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  gap: 0.5rem;
 `;
