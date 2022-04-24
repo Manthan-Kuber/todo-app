@@ -1,4 +1,4 @@
-<h1 align="center">Windbnb - A minimal version of Airbnb</h1>
+<h1 align="center">Todo App</h1>
 
 A Todo App which allows you to add & delete todos. It stores your todos in localStorage of your browser so that they won't be deleted on page refresh or session end
 
