@@ -38,5 +38,17 @@ export const DeleteButton = styled(StyledButton)`
 `;
 export const FallbackText = styled.p`
   font: 500 2.4rem var(--ff-montserrat);
+  color:#333;
   text-align: center;
 `
+
+export const Footer = styled.footer`
+  margin-top: auto;
+  margin-bottom: 2.4rem;
+`;
+
+export const FooterText = styled.p`
+  font: 1.4rem var(--ff-montserrat);
+  color: #bdbdbd;
+  text-align: center;
+`;

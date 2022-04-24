@@ -8,7 +8,7 @@ const AddTodo = () => {
   return (
     <Container>
       <TodoInput
-        placeholder="add details"
+        placeholder="add todo"
         value={todo.todoInput}
         onChange={(e) => dispatch(todoInputChangeHandler(e.target.value))}
       />

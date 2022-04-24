@@ -19,7 +19,7 @@ const initialState: todoState = {
     todoList: [
       { name: "Eat", status: false },
       { name: "Sleep", status: false },
-      { name: "Code", status: false },
+      { name: "Code", status: true },
       { name: "Repeat", status: false },
     ],
     todoInput: "",

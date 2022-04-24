@@ -4,6 +4,8 @@ import {
   Main,
   MainWrapper,
   FallbackText,
+  Footer,
+  FooterText,
 } from "./App.styles";
 import AddTodo from "./components/AddTodo/AddTodo";
 import Tabs from "./components/Tabs/Tabs";
@@ -44,6 +46,14 @@ function App() {
             </AnimatePresence>
           </Main>
         </MainWrapper>
+        <Footer>
+          <FooterText>
+            Created by{" "}
+            <b>
+              <u>Manthan Kuber</u>
+            </b>
+          </FooterText>
+        </Footer>
       </AppWrapper>
     </>
   );

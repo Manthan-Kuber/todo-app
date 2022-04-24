@@ -1,50 +1,60 @@
-# Todo App
+<h1 align="center">Windbnb - A minimal version of Airbnb</h1>
 
 A Todo App which allows you to add & delete todos. It stores your todos in localStorage of your browser so that they won't be deleted on page refresh or session end
 
-# Getting Started with Create React App
+<!-- Please update value in the {}  -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h3>
+    <a href="https://manthan-kuber.github.io/todo-app/">
+      Live Demo
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Overview](#overview)
+- [Learnings](#learnings)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- OVERVIEW -->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Overview
 
-### `npm test`
+Desktop Screenshot
+![screenshot](deskSS1.png)
+![screenshot](deskSS2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mobile Screenshot
+![screenshot](mobSS.png)
 
-### `npm run build`
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [ReduxToolkit](https://redux-toolkit.js.org/)
+- [StyledComponents](https://styled-components.com/)
+- [FramerMotion](https://www.framer.com/motion/)
 
-### `npm run eject`
+## Learnings
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Learned Typescript
+- Learned about Redux fundamentals
+- Learned about configuring Redux in React using react-redux and redux toolkit
+- Learned about persisted reducers
+- Learned about animations in framer motion
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub [@Manthan-Kuber](https://github.com/Manthan-Kuber)
