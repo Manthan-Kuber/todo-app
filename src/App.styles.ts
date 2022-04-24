@@ -36,3 +36,7 @@ export const DeleteButton = styled(StyledButton)`
   position: absolute;
   right: 0;
 `;
+export const FallbackText = styled.p`
+  font: 500 2.4rem var(--ff-montserrat);
+  text-align: center;
+`
