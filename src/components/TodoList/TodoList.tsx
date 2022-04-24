@@ -11,12 +11,14 @@ const TodoList = () => {
       {todo.selectedTab === "All" ? (
         todo.todoList.map((item, index) => (
           <li key={index}>
-            <input
-              type="checkbox"
-              checked={item.status}
-              onChange={() => dispatch(checkUncheck(index))}
-            />
-            <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
+            <Wrapper>
+              <input
+                type="checkbox"
+                checked={item.status}
+                onChange={() => dispatch(checkUncheck(index))}
+              />
+              <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
+            </Wrapper>
           </li>
         ))
       ) : todo.selectedTab === "Active" ? (
@@ -24,12 +26,14 @@ const TodoList = () => {
           .filter((item) => item.status === false)
           .map((item, index) => (
             <li key={index}>
-              <input
-                type="checkbox"
-                checked={item.status}
-                onChange={() => dispatch(checkUncheck(index))}
-              />
-              <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
+              <Wrapper>
+                <input
+                  type="checkbox"
+                  checked={item.status}
+                  onChange={() => dispatch(checkUncheck(index))}
+                />
+                <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
+              </Wrapper>
             </li>
           ))
       ) : todo.selectedTab === "Completed" ? (

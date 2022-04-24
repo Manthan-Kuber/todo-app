@@ -4,7 +4,6 @@ import Tabs from "./components/Tabs/Tabs";
 import TodoList from "./components/TodoList/TodoList";
 import GlobalStyles from "./GlobalStyles";
 import { useAppSelector } from "./app/hooks";
-import { StyledButton } from "./components/AddTodo/AddTodo.styles";
 import { BiTrashAlt } from "react-icons/bi";
 
 function App() {
