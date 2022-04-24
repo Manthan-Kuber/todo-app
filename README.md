@@ -1,3 +1,7 @@
+# Todo App
+
+A Todo App which allows you to add & delete todos. It stores your todos in localStorage of your browser so that they won't be deleted on page refresh or session end
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
