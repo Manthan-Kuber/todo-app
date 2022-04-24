@@ -5,7 +5,7 @@ export const tabsList: Array<string> = ["All", "Active", "Completed"];
 interface todoState {
   value: {
     selectedTab: string;
-    isChecked: boolean;
+    isChecked: boolean[];
     todoList: Array<string>;
     todoInput: string;
   };
@@ -14,7 +14,7 @@ interface todoState {
 const initialState: todoState = {
   value: {
     selectedTab: tabsList[0],
-    isChecked: false,
+    isChecked: [false, false, false, false],
     todoList: ["Eat", "Sleep", "Code", "Repeat"],
     todoInput: "",
   },
@@ -27,8 +27,9 @@ const todoSLice = createSlice({
     switchTab: (state, action) => {
       state.value.selectedTab = action.payload;
     },
-    checkUncheck: (state) => {
-      state.value.isChecked = !state.value.isChecked;
+    checkUncheck: (state, action) => {
+      state.value.isChecked[action.payload] =
+        !state.value.isChecked[action.payload];
     },
     todoInputChangeHandler: (state, action) => {
       state.value.todoInput = action.payload;
