@@ -34,7 +34,6 @@ const TodoList = () => {
               />
               <p className={item.status ? "strikedTodo" : ""}>{item.name}</p>
             </Wrapper>
-            <>{console.log(item.id)}</>
             {todo.selectedTab === "Completed" && (
               <BiTrashAlt
                 size={24}
