@@ -18,6 +18,22 @@ import { deleteAllTodos } from "./features/todo";
 function App() {
   const todo = useAppSelector((state) => state.todo.value);
   const dispatch = useAppDispatch();
+  const displayMessage = (selectedTab: string): string => {
+    if (todo.todoList.length === 0) {
+      return "No Todos Found";
+    } else if (
+      todo.todoList.filter((todo) => todo.status === false).length === 0 &&
+      selectedTab === "Active"
+    ) {
+      return "No Active Todos Found";
+    } else if (
+      todo.todoList.filter((todo) => todo.status === true).length === 0 &&
+      selectedTab === "Completed"
+    ) {
+      return "No Completed Todos Found";
+    }
+    return "";
+  };
   return (
     <>
       <GlobalStyles />
@@ -38,9 +54,7 @@ function App() {
                   Delete All
                 </DeleteButton>
               )}
-            {todo.todoList.length === 0 && (
-              <FallbackText>Nothing to see here!</FallbackText>
-            )}
+            <FallbackText>{displayMessage(todo.selectedTab)}</FallbackText>
           </Main>
         </MainWrapper>
         <Footer>
