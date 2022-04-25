@@ -36,8 +36,10 @@ const todoSLice = createSlice({
       state.value.selectedTab = action.payload;
     },
     checkUncheck: (state, action) => {
-      state.value.todoList[action.payload].status =
-        !state.value.todoList[action.payload].status;
+      // @ts-ignore: Object is possibly 'undefined'.
+      state.value.todoList.find((todo) => todo.id === action.payload).status =
+      // @ts-ignore: Object is possibly 'undefined'.
+      !state.value.todoList.find((todo) => todo.id === action.payload).status;
     },
     todoInputChangeHandler: (state, action) => {
       state.value.todoInput = action.payload;
