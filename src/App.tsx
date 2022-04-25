@@ -14,7 +14,6 @@ import GlobalStyles from "./GlobalStyles";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { BiTrashAlt } from "react-icons/bi";
 import { deleteAllTodos } from "./features/todo";
-import { AnimatePresence } from "framer-motion";
 
 function App() {
   const todo = useAppSelector((state) => state.todo.value);
@@ -30,20 +29,18 @@ function App() {
             {(todo.selectedTab === "All" || todo.selectedTab === "Active") && (
               <AddTodo />
             )}
-            <AnimatePresence exitBeforeEnter>
-              <TodoList />
-              {todo.selectedTab === "Completed" &&
-                todo.todoList.filter((item) => item.status === true).length !==
-                  0 && (
-                  <DeleteButton onClick={() => dispatch(deleteAllTodos())}>
-                    <BiTrashAlt className="deleteIcon" size={14} />
-                    Delete All
-                  </DeleteButton>
-                )}
-              {todo.todoList.length === 0 && (
-                <FallbackText>Nothing to see here!</FallbackText>
+            <TodoList />
+            {todo.selectedTab === "Completed" &&
+              todo.todoList.filter((item) => item.status === true).length !==
+                0 && (
+                <DeleteButton onClick={() => dispatch(deleteAllTodos())}>
+                  <BiTrashAlt className="deleteIcon" size={14} />
+                  Delete All
+                </DeleteButton>
               )}
-            </AnimatePresence>
+            {todo.todoList.length === 0 && (
+              <FallbackText>Nothing to see here!</FallbackText>
+            )}
           </Main>
         </MainWrapper>
         <Footer>

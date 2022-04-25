@@ -11,6 +11,9 @@ const AddTodo = () => {
         placeholder="add todo"
         value={todo.todoInput}
         onChange={(e) => dispatch(todoInputChangeHandler(e.target.value))}
+        onKeyPress={(e) =>
+          e.key === "Enter" && dispatch(addTodos(todo.todoInput))
+        }
       />
       <StyledButton onClick={() => dispatch(addTodos(todo.todoInput))}>
         Add
