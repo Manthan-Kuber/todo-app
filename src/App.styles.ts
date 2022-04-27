@@ -16,7 +16,6 @@ export const AppWrapper = styled.div`
 export const Main = styled.main`
   width: min(100%, 48rem);
   margin-top: 6rem;
-  position: relative;
   .deleteIcon {
     position: relative;
     top: 1.4px;
@@ -33,9 +32,9 @@ export const DeleteButton = styled(StyledButton)`
   padding: 1.2rem 2.6rem;
   border-radius: 4px;
   background-color: #eb5757;
-  position: absolute;
-  right: 0;
+  float:right;
 `;
+
 export const FallbackText = styled.p`
   font: 500 2.4rem var(--ff-montserrat);
   color:#333;
@@ -44,7 +43,7 @@ export const FallbackText = styled.p`
 
 export const Footer = styled.footer`
   margin-top: auto;
-  margin-bottom: 2.4rem;
+  padding-top: 2.4rem;
 `;
 
 export const FooterText = styled.p`

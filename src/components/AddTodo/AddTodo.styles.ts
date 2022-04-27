@@ -9,14 +9,14 @@ export const Container = styled.div`
 `;
 
 export const TodoInput = styled.input`
-  padding: 2rem 0 2rem 1.2rem;
+  padding:2rem 1.2rem;
   border-radius: 12px;
   width: 100%;
   border: 1px solid grey;
   accent-color: var(--clr-primary);
   font-family: var(--ff-montserrat);
   font-weight: 400;
-
+ 
   &:focus {
     border-color: transparent;
   }

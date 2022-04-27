@@ -4,7 +4,7 @@ import { useAppSelector } from "../../app/hooks";
 import { useAppDispatch } from "../../app/hooks";
 import { switchTab, tabsList } from "../../features/todo";
 
-const Tabs = () => {
+const Tabs:React.FC = () => {
   const todo = useAppSelector((state) => state.todo.value);
   const dispatch = useAppDispatch();
   return (

@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { Container, StyledButton, TodoInput } from "./AddTodo.styles";
 import { todoInputChangeHandler, addTodos } from "../../features/todo";
 
-const AddTodo = () => {
+const AddTodo:React.FC = () => {
   const todo = useAppSelector((state) => state.todo.value);
   const dispatch = useAppDispatch();
   return (

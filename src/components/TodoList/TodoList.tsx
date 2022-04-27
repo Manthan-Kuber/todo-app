@@ -4,7 +4,7 @@ import { StyledUl, Wrapper } from "./TodoList.styles";
 import { BiTrashAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-const TodoList = () => {
+const TodoList:React.FC = () => {
   const todo = useAppSelector((state) => state.todo.value);
   const dispatch = useAppDispatch();
   return (
