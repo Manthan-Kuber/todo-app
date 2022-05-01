@@ -16,7 +16,7 @@ export const StyledUl = styled.ul`
     accent-color: var(--clr-primary);
   }
   p{
-    word-break: break-all;
+    word-break: break-word;
   }
   .strikedTodo {
     text-decoration: line-through;
@@ -25,6 +25,7 @@ export const StyledUl = styled.ul`
   .deleteIcon {
     color: #bdbdbd;
     flex:1;
+    align-self: center;
     &:hover {
       cursor: pointer;
       color: red;
